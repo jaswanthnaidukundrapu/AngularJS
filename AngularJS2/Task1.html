@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS Email Validation</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+  <div ng-app="myApp" ng-controller="myCtrl">
+    <form name="emailForm">
+      <input type="email" name="email" ng-model="userEmail" placeholder="Enter your email" required>
+      <span style="color:red" ng-show="emailForm.email.$error.email && emailForm.email.$dirty">Invalid email address</span>
+    </form>
+  </div>
+</body>
+
+<script>
+  angular.module('myApp', []).controller('myCtrl', function($scope) {
+    // Controller code can be added here if needed
+  });
+</script>
+
+</html>
